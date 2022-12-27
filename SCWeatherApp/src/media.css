@@ -9,8 +9,9 @@
         padding: 9px 0 9px 20px;
         margin-top: 5px;
     }
-    .submit{
-        width:80px;
+    .submit,
+    .real-temp{
+        width: 50px;
     }
     .temp {
         font-size: 50px;
@@ -68,9 +69,6 @@
         position: relative;
         left: -14.5px;
     }
-    .real-temp{
-        width: 60px;
-    }
 }
 @media (max-width: 466px){
    .top-row{
@@ -78,20 +76,20 @@
         display: block;
         margin-bottom: 20px;
    }
-    .real-temp{
-        position: absolute;
-        top: 116px;
-        left: 232px;
-        padding: 9px 0;
-        width: 80px;
-    }
    .temp{
         margin-top: 10px;
    }
+   .weather-description{
+    margin: -25px 0 20px 0;
+}
     input{
-        width: 200px;
+        width: 230px;
         padding: 9px 0 9px 20px;
         margin-top: 5px;
+    }
+    .submit,
+    .real-temp{
+        width: 70px;
     }
     .item {
         width: 38px;
@@ -101,7 +99,8 @@
     .item span{
         font-size: 18px;
     }
-    .features{
+    .features,
+    .wind{
         display: none;
     }
     .img{
@@ -120,9 +119,14 @@
         margin-left: -10px;
     }
 }
+@media (max-width: 435px){
+    input{
+        width: 350px;
+    }
+}
 @media (max-width: 378px){
     input{
-        width: 200px;
+        width: 300px;
         padding: 9px 0 9px 20px;
         margin-top: 5px;
     }
@@ -130,11 +134,5 @@
         width: 100px;
         height: 100px;
         margin: 0 0 0 40px;
-    }
-}
-@media (max-width: 341px){
-    .real-temp{
-        position: absolute;
-        left: 115px;
     }
 }
