@@ -5,15 +5,18 @@ body{
     font-family:'Lato', sans-serif;
     background-color:  #5A6275;
     background-image: url(https://krot.info/uploads/posts/2022-02/1644931637_11-krot-info-p-fon-pogoda-12.png);
-    /* background-repeat: no-repeat; */
     background-size:cover;
     max-width: 100%;
     opacity: .85;
     text-shadow: 1px 1px 1px #030407;
 }
+p{
+    margin: 0;
+    padding: 0;
+}
 .wrapper {
     max-width: 100%;
-    background-color:  #5A6275;
+    background-color:  #606a83;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -52,7 +55,7 @@ input:active,
     box-shadow: 1px 1px 2px white;
 }
 .submit{
-    width: 100px;
+    width: 70px;
     padding: 9px 0;
     cursor: pointer;
     transition: all .3s ease;
@@ -60,10 +63,14 @@ input:active,
 .temp {
     color: var(--text-color);
 }
+.weather-description{
+    margin: 0 40px 0 auto;
+    color: var(--text-color);
+    text-shadow: none;
+}
 .real-temp{
-    display: block;
-    width: 100px;
-    padding: 5px 0;
+    width: 70px;
+    padding: 9px 0;
     background: transparent;
     border: 1px solid white;
     outline: none;
@@ -71,7 +78,7 @@ input:active,
     color: #fff;
     cursor: pointer;
     transition: all .3s ease;
-    margin: 0 43px 0 auto;
+    margin: 0;
 }
 .temperature{
     display: inline;
@@ -81,7 +88,7 @@ input:active,
 .units{
     font-size: 35px;
     color: #e3ecff;
-    cursor: pointer;
+    cursor:context-menu;
     transition: all .3s ease-in-out;
 }
 .celsium{
@@ -89,27 +96,28 @@ input:active,
 }
 .fahrenheit{
     position: relative;
-    left: -47px;
+    left: -46px;
 }
 .current{
     color: var(--text-color);
 }
 h1,
-h2,
-h3{
+h2
+{
     margin: 0;
     line-height: 1.5;
     color: var(--text-color);
 }
-h2,
-h3{
+h2
+{
     font-style: italic;
     font-weight: 100;
 }
-.features{
-    margin-top: 10px;
+.features,
+.wind{
+    margin-top: 5px;
     line-height: 1.6;
-    font-size: 25px;
+    font-size: 18px;
 }
 .middle-row {
     flex: 1 1 auto;
@@ -122,8 +130,6 @@ h3{
 .img{
     width: 200px;
     height: 200px;
-    border-radius: 50%;
-    background-color: rgb(228, 237, 59);
     margin-left: 80px;
 }
 
