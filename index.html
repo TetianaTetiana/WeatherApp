@@ -10,73 +10,69 @@
     <link rel="stylesheet" href="SCWeatherApp/src/media.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
-  <body>
+<body>
     <div class="wrapper">
-      <div class="top-row">
-        <form id="search-form" action="">
-          <input
-            id="search-text-input"
-            type="search"
-            placeholder="Enter a city"
-          />
-          <input class="submit" type="submit" value="Search" />
-        </form>
-        <div class="temp">
-          <p class="temperature">+20</p>
-          <span class="units celsium current">°C </span>
-          <span class="units fahrenheit off"> °F</span>
+        <div class="top-row">
+            <form id="search-form" action="">
+                <input id="search-text-input" type="search" placeholder="Enter a city">
+                <input class="submit" type="submit" value="Search">
+                <button class="real-temp">Current</button>
+            </form>
+             <div class="temp">
+                <p class="temperature">0</p>
+                <span class="units celsium current"> °C </span>
+                <span class="units fahrenheit off"> °F </span>
+            </div>
         </div>
-      </div>
-      <button class="real-temp">Current</button>
-      <div class="middle-row">
-        <div class="content">
-          <h1>
-            Kyiv, Ukraine
-          </h1>
-          <h2>
-            Day
-          </h2>
-          <h3>
-            Data, Year
-          </h3>
-          <p class="features">
-            humidity&nbsp;&nbsp;&nbsp;&nbsp;<span>...</span>
-          </p>
+        <p class="weather-description">Clear scy</p>
+        <div class="middle-row">
+            <div class="content">
+                <h1>
+                    City, Country
+                </h1>
+                <h2>
+                    Day, time
+                </h2>
+                <p class="wind">
+                    wind speed&nbsp;&nbsp;&nbsp;&nbsp;12m/s
+                </p>
+                <p class="features">
+                    humidity&nbsp;&nbsp;&nbsp;&nbsp;0%<br />
+                </p>
+            </div>
+            <img class="img" src=""></img>
         </div>
-        <div class="img"></div>
-      </div>
-      <div class="footer-row">
-        <ul class="list">
-          <li class="item">
-            Monday<br />
-            <span>🌩</span><br />
-            <span>+20°C</span>
-          </li>
-          <li class="item">
-            Tuesday<br />
-            <span>🌤</span><br />
-            <span>+23°C</span>
-          </li>
-          <li class="item">
-            Wednesday<br />
-            <span>🌩</span><br />
-            <span>+18°C</span>
-          </li>
-          <li class="item">
-            Thursday <br />
-            <span>🌦</span><br />
-            <span>+20°C</span>
-          </li>
-          <li class="item">
-            Friday<br />
-            <span>🌤</span><br />
-            <span>+18°C</span>
-          </li>
-        </ul>
-      </div>
+        <div class="footer-row">
+            <ul class="list">
+                <li class="item">
+                    Monday<br />
+                    <span>🌩</span><br />
+                    <span>+20°C</span>
+                </li>
+                <li class="item">
+                    Tuesday<br />
+                    <span>🌤</span><br />
+                    <span>+23°C</span>
+                </li>
+                <li class="item">
+                    Wednesday<br />
+                    <span>🌩</span><br />
+                    <span>+18°C</span>
+                </li>
+                <li class="item">
+                    Thursday <br />
+                   <span>🌦</span><br />
+                    <span>+20°C</span>
+                </li>
+                <li class="item">
+                    Friday<br />
+                    <span>🌤</span><br />
+                    <span>+18°C</span>
+                </li>
+            </ul>
+        </div>
     </div>
     <p style="text-align: center; font-size: 12px; text-shadow: none;">Coded by Tetiana Karpenko. <a href="https://github.com/TetianaTetiana/WeatherApp/tree/weather-app">Open-sourced on GitHub</a></p>
-
-    <script src="SCWeatherApp/src/index.js"></script>
-  </body>
+    <script src="../week-3/app.js"></script>
+</body>
 </html>
