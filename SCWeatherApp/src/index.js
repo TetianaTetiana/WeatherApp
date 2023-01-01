@@ -23,11 +23,19 @@ formatDate = (timestemp) => {
   return `${day}, ${hours}:${minutes}\n${month}, ${year}`;
 }
 
+formatDay = (timestamp) => {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
+getForcastByCoord = (coordinates) => {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=b400ae3b711a616262d18b0ca2cbe78f&units=metric`;
+  axios.get(apiUrl).then(weatherForcast);
+}
+
 showWeather = (resp) => {
-  // console.log(resp.data);
-  // console.log(resp.data.weather[0].icon);
-  // console.log(resp.data.dt * 1000);
-  // console.log(new Date(resp.data.dt * 1000));
   celTemp = Math.round(resp.data.main.temp);
 
   let temp = celTemp;
@@ -49,12 +57,14 @@ showWeather = (resp) => {
   cityName.innerHTML = city;
   day.innerHTML = formatDate(resp.data.dt * 1000);
   description.innerHTML = weatherDesc;
-  windspeed.innerHTML = `wind speed &nbsp;&nbsp;&nbsp;${wind} km/s`;
+  windspeed.innerHTML = `wind speed &nbsp;&nbsp;&nbsp;${wind} m/s`;
   humidityElem.innerHTML =
   `humidity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${humidity}%`;
   icon.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${resp.data.weather[0].icon}@2x.png`);
+
+    getForcastByCoord(resp.data.coord);
 }
 axios.get(apiUrl).then(showWeather);
 
@@ -102,3 +112,23 @@ showCurrentTemp = (event) => {
 }
 let currentBtn = document.querySelector(".real-temp");
 currentBtn.addEventListener("click", showCurrentTemp);
+
+weatherForcast = (response) => {
+  let forecast = response.data.daily;
+  console.log(forecast);
+  let forcastElem = document.querySelector(".list");
+  let forecastHTML = '';
+  let days = ["Thursday", "Friday", "Saturday", "Sunday","Monday"];
+    forecast.forEach(function (forecastDay, index) {
+      if(index < 5){
+        forecastHTML +=
+        `<li class="item">
+            ${formatDay(forecastDay.dt)}
+            <img src=https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png />
+            <span>${Math.round(forecastDay.temp.max)}°C |</span>
+            <span>${Math.round(forecastDay.temp.min)}°C</span>
+        </li>`};
+    });
+
+  forcastElem.innerHTML = forecastHTML;
+}
