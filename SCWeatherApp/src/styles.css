@@ -9,6 +9,7 @@ body{
     max-width: 100%;
     opacity: .85;
     text-shadow: 1px 1px 1px #030407;
+    user-select: none;
 }
 p{
     margin: 0;
@@ -88,15 +89,16 @@ input:active,
 .units{
     font-size: 35px;
     color: #e3ecff;
-    cursor:context-menu;
+    cursor: pointer;
     transition: all .3s ease-in-out;
+    margin-left: 10px;
 }
 .celsium{
     vertical-align: top;
 }
 .fahrenheit{
     position: relative;
-    left: -46px;
+    left: -50px;
 }
 .current{
     color: var(--text-color);
@@ -115,9 +117,11 @@ h2
 }
 .features,
 .wind{
-    margin-top: 5px;
-    line-height: 1.6;
-    font-size: 18px;
+    line-height: 1.4;
+    font-size: 16px;
+}
+.wind{
+    margin-top: 15px;
 }
 .middle-row {
     flex: 1 1 auto;
@@ -137,20 +141,29 @@ h2
     list-style: none;
     padding: 0;
     text-align: center;
-    font-size: 14px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .item {
-    width: 70px;
+    width: 80px;
     height: 100px;
-    padding: 10px;
+    padding: 10px 10px 20px 10px;
     border: 1px solid white;
     border-radius: 30px;
 }
-.item span{
+.item img{
     display: block;
-    font-size: 23px;
+    width: 70px;
+    height: 70px;
+}
+.item span{
+    font-size: 13px;
     font-style: normal;
     margin: 0px 0 0 0px;
     color: var(--text-color);
+}
+.githublink{
+     text-align: center;
+     font-size: 12px;
+     text-shadow: none;
+     margin-top: 10px;
 }
