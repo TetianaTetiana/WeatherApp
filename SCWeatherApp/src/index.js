@@ -20,7 +20,7 @@ formatDate = (timestemp) => {
       minutes = `0${minutes}`;
     }
 
-  return `${day}, ${hours}:${minutes}\n${month}, ${year}`;
+  return `${day}, ${hours}:${minutes}`;
 }
 
 formatDay = (timestamp) => {
