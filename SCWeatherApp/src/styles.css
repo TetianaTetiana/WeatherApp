@@ -98,7 +98,7 @@ input:active,
 }
 .fahrenheit{
     position: relative;
-    left: -50px;
+    left: -58px;
 }
 .current{
     color: var(--text-color);
