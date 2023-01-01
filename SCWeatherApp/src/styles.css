@@ -1,5 +1,5 @@
 :root{
-    --text-color: rgb(45, 222, 242);
+    --text-color: rgb(14, 24, 207);
 }
 body{
     font-family:'Lato', sans-serif;
@@ -7,8 +7,7 @@ body{
     background-image: url(https://krot.info/uploads/posts/2022-02/1644931637_11-krot-info-p-fon-pogoda-12.png);
     background-size:cover;
     max-width: 100%;
-    opacity: .85;
-    text-shadow: 1px 1px 1px #030407;
+    text-shadow: 1px 1px .5px #070303;
     user-select: none;
 }
 p{
@@ -17,7 +16,7 @@ p{
 }
 .wrapper {
     max-width: 100%;
-    background-color:  #606a83;
+    background-color:  #99c7f0;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -26,7 +25,7 @@ p{
     border-radius: 20px;
     width: 700px;
     height: 500px;
-    color: #fff;
+    color: var(--text-color);
     box-shadow: inset 2px 2px 12px  #c8d8ff;
 }
 .top-row,
@@ -65,7 +64,7 @@ input:active,
     color: var(--text-color);
 }
 .weather-description{
-    margin: 0 40px 0 auto;
+    margin: 0 55px 0 auto;
     color: var(--text-color);
     text-shadow: none;
 }
@@ -103,6 +102,7 @@ input:active,
 .current{
     color: var(--text-color);
 }
+
 h1,
 h2
 {
@@ -119,6 +119,7 @@ h2
 .wind{
     line-height: 1.4;
     font-size: 16px;
+    text-shadow: none;
 }
 .wind{
     margin-top: 15px;
@@ -149,10 +150,11 @@ h2
     padding: 10px 10px 20px 10px;
     border: 1px solid white;
     border-radius: 30px;
+    color: var(--text-color);
 }
 .item img{
     display: block;
-    width: 70px;
+    width: 80px;
     height: 70px;
 }
 .item span{
