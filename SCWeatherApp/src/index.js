@@ -125,7 +125,7 @@ weatherForcast = (response) => {
         `<li class="item">
             ${formatDay(forecastDay.dt)}
             <img src=https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png />
-            <span>${Math.round(forecastDay.temp.max)}°C |</span>
+            <span>${Math.round(forecastDay.temp.max)}°C|</span>
             <span>${Math.round(forecastDay.temp.min)}°C</span>
         </li>`};
     });
