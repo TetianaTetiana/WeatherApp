@@ -83,11 +83,11 @@ input:active,
 }
 .temperature{
     display: inline;
-    font-size: 80px;
+    font-size: 70px;
     line-height: 1;
 }
 .units{
-    font-size: 35px;
+    font-size: 33px;
     color: #e3ecff;
     cursor: pointer;
     transition: all .3s ease-in-out;
@@ -98,7 +98,7 @@ input:active,
 }
 .fahrenheit{
     position: relative;
-    left: -58px;
+    left: -54px;
 }
 .current{
     color: var(--text-color);
